@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route("/api")
+@app.route("/api", methods=['POST', 'DELETE', 'GET'])
 def my_microservice():
     return jsonify({"test" : "test"})
 
